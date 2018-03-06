@@ -1,0 +1,28 @@
+group 'org.panthers'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: springBootStarterWeb
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: springBootStarterDataPA
+    compile group: 'com.h2database', name: 'h2', version: h2DB
+    compile group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: jacksonMapperASL
+    compile group: 'org.springframework.hateoas', name: 'spring-hateoas', version: springHateaos
+
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootStarterTest
+    testCompile group: 'org.spockframework', name: 'spock-spring', version: '1.1-groovy-2.4'
+    testCompile group: 'com.h2database', name: 'h2', version: h2DB
+    testCompile group: 'cglib', name: 'cglib-nodep', version: cglibNodep
+    testCompile 'org.springframework:spring-test'
+    testCompile 'com.blogspot.toomuchcoding:spock-subjects-collaborators-extension:1.2.1'
+}
+
